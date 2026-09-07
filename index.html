@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Neexxo — Catálogo digital de fragancias. Una selección de perfumes para cada versión de ti.">
+<meta name="theme-color" content="#FFFFFF">
+<title>Neexxo — Catálogo de Fragancias</title>
+
+<!-- Estilos (modulares por concern) -->
+<link rel="icon" href="img/logo.png" type="imagen/png">
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/catalog.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="brand-row">
+    <h1 class="wordmark">Neexxo</h1>
+    <img class="logo" src="img/logo.png" alt="logo de Neexxo">
+  </div>
+  <p class="tagline">Una selección de fragancias para cada versión de ti.</p>
+  <hr class="header-rule">
+</header>
+
+<div class="controls">
+  <nav class="tabs" id="tabs" aria-label="Filtrar por colección"></nav>
+  <div class="search-wrap">
+    <input type="search" id="search" placeholder="Buscar referencia…" aria-label="Buscar perfume por nombre">
+  </div>
+</div>
+
+<p class="result-count" id="resultCount" aria-live="polite"></p>
+
+<main class="catalog" id="catalog"></main>
+
+<footer class="site-footer">
+  <span><strong>Neexxo</strong> — Catálogo Digital</span>
+  <a href="https://wa.me/573134674405?text=¡Hola%20Neexxo!%20Quiero%20hacer%20un%20pedido." target="_blank">Contáctanos</a>
+  <a href="https://www.instagram.com/neexxo_oficial" target="_blank">Instagram</a>
+  <span>Actualizado © 2026</span>
+</footer>
+
+<!-- Módulos JS (orden de dependencias) -->
+<script src="js/config.js"></script>
+<script src="js/models/Product.js"></script>
+<script src="js/services/ProductService.js"></script>
+<script src="js/data/products.js"></script>
+<script src="js/catalog.js"></script>
+<script>
+  (function () {
+    var catalog = new NEEXXO.Catalog(document);
+    catalog.init();
+  })();
+</script>
+
+</body>
+</html>

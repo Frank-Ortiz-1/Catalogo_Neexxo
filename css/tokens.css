@@ -1,0 +1,29 @@
+/* ============================================
+   NEEXXO — TOKENS DE MARCA
+   Edita estos valores para ajustar la paleta y
+   tipografía en todo el catálogo de una sola vez.
+   ============================================ */
+:root {
+  color-scheme: light;
+
+  /* Paleta */
+  --bg:        #FFFFFF;   /* fondo principal, blanco nítido */
+  --surface:   #F6F4F0;   /* paños suaves para franjas y filtros */
+  --ink:       #1B1712;   /* negro cálido, texto principal */
+  --ink-soft:  #6B6459;   /* gris tostado, texto secundario */
+  --gold:      #9C7A3F;   /* bronce quemado, único acento */
+  --line:      #E6E2DA;   /* líneas finas / bordes */
+  --line-dark: #D8D2C6;
+
+  /* Tipografía */
+  --serif: 'Fraunces', Georgia, serif;
+  --sans:  'Jost', system-ui, sans-serif;
+
+  /* Sombras y transiciones */
+  --shadow-card: 0 18px 32px -22px rgba(27, 23, 18, 0.35);
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  /* Layout */
+  --gutter: 6vw;
+  --gutter-mobile: 5vw;
+}
